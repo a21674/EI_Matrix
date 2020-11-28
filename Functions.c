@@ -12,8 +12,8 @@ int SumMatrix(int matrixAA[10][10], int  matrixBB[10][10])  //inicia função para
 {
     int matrixResult[10][10]; // array para guardar a matriz com o resultado da soma
 
-    for (i = 0; i < rows; ++i)  //clico para linhas
-        for (j = 0; j < colums; ++j) //ciclo para colunas
+    for (i = 0; i < rows; ++i)  //cico para criar as linhas pra as nossas matrizes 
+        for (j = 0; j < colums; ++j) //cico para criar as colunas pra as nossas matrizes 
         {
             matrixResult[i][j] = matrixAA[i][j] + matrixBB[i][j]; //guarda no array o valor das somas das duas matrizes
         }
@@ -27,4 +27,27 @@ int SumMatrix(int matrixAA[10][10], int  matrixBB[10][10])  //inicia função para
             }
         }
     return matrixResult; //devolvemos o resultado da nossa soma
+}
+
+void insertValuesMatrixA()
+{
+    printf("\nInsere os elementos da Matriz A:\n");
+    for (i = 0; i < rows; ++i) // ciclo principal para correr numero de linhas definidas
+        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
+        {
+            printf("Insira o elemento a%d%d: ", i + 1, j + 1); //pede para inserir o elemento 
+            scanf("%d", &matrixA[i][j]); // lê o elemento inserido
+        }
+
+}
+
+void insertValuesMatrixB()
+{
+    printf("Insere os elementos da Matriz B:\n");
+    for (i = 0; i < rows; ++i)  // ciclo principal para correr numero de linhas definidas
+        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
+        {
+            printf("Enter element a%d%d: ", i + 1, j + 1);
+            scanf("%d", &matrixB[i][j]);
+        }
 }

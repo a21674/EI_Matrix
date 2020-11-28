@@ -14,36 +14,66 @@
 int main() {
     setlocale(LC_ALL, "Portuguese"); //definimos a codificação da nossa região
 
-
+    int opcao = 0;
     printf("Bem-Vindo ao EI_Matrix \n");
 
-    printf("Insira o número de linhas (entre 1 e 10): ");
-    scanf("%d", &rows); // lê o numero de linhas
 
-    printf("Insira o número de colunas (entre 1 e 10): ");
-    scanf("%d", &colums); // lê o numero de colunas
+    while (opcao == 0)
+    {
+        printf("\n 1 - Somar duas matrizes: ");
+        printf("\n 2 - Subtrair duas matrizes: ");
+        printf("\n 3 - Multiplicar duas matrizes: ");
 
+        printf("\n\n");
+        printf("\n Digite a opção que deseja: ");
+        scanf("%d", &opcao);
 
-    printf("\nInsere os elementos da Matriz A:\n");
-    for (i = 0; i < rows; ++i) // ciclo principal para correr numero de linhas definidas
-        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
+        switch (opcao)
         {
-            printf("Insira o elemento a%d%d: ", i + 1, j + 1); //pede para inserir o elemento 
-            scanf("%d", &matrixA[i][j]); // lê o elemento inserido
+        case 1: 
+            printf("\n Opção Escolhida: 1 - Somar duas matrizes: ");
+            printf("\nInsira o número de linhas (entre 1 e 10): ");
+            scanf("%d", &rows); // lê o numero de linhas
+
+            printf("Insira o número de colunas (entre 1 e 10): ");
+            scanf("%d", &colums); // lê o numero de colunas
+
+            insertValuesMatrixA();
+            insertValuesMatrixB();
+
+            // apresentamos o resultado da soma
+            printf("\nA Soma das Matrizes A e B é: \n");
+            SumMatrix(matrixA, matrixB); // chamamos a função SumMatrix e adicionamos como paramentros as nossas Matrizes
+
+            break;
+
+        case 2: 
+            printf("\n 2 - Subtrair duas matrizes: ");
+            break;
+        case 3: 
+            printf("\n 3 - Multiplicar duas matrizes: ");
+            break;
+
+        default:
+            printf("Insira uma opção correta");
+            break;
+
         }
-
-    printf("Insere os elementos da Matriz B:\n");
-    for (i = 0; i < rows; ++i)  // ciclo principal para correr numero de linhas definidas
-        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
-        {
-            printf("Enter element a%d%d: ", i + 1, j + 1);
-            scanf("%d", &matrixB[i][j]);
-        }
+           
 
 
-    // apresentamos o resultado da soma
-    printf("\nA Soma das Matrizes A e B é: \n");
-    SumMatrix(matrixA, matrixB); // chamamos a função SumMatrix e adicionamos como paramentros as nossas Matrizes
+    }
+   
+
+    
+
+    
+    
+
+    
+
+
+   
 
     return 0;
 }
