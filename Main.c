@@ -8,19 +8,19 @@
 
 #include <stdio.h>
 #include <locale.h> // lib para reconhecer os carateres especiais usados na lingua portuguesa como os 'ç, `,^' 
-#include "Header.h"
+#include "Header.h" //incluimos o nosso ficheiro Header
 
 
 int main() {
     setlocale(LC_ALL, "Portuguese"); //habilita a acentuação para o português
 
 
-    printf("Bem-Vindo ao EIMatrix\n");
+    printf("Bem-Vindo ao EI_Matrix \n");
 
-    printf("Insira o número de linhas (entre 1 e 100): ");
+    printf("Insira o número de linhas (entre 1 e 10): ");
     scanf("%d", &rows); // lê o numero de linhas
 
-    printf("Insira o número de colunas (entre 1 e 100): ");
+    printf("Insira o número de colunas (entre 1 e 10): ");
     scanf("%d", &colums); // lê o numero de colunas
 
 
@@ -28,8 +28,8 @@ int main() {
     for (i = 0; i < rows; ++i) // cliclo para apresentar o numero de linhas definidas
         for (j = 0; j < colums; ++j) // cliclo para apresentar o numero de colunas definidas
         {
-            printf("Enter element a%d%d: ", i + 1, j + 1); //apresenta o numero do elemento
-            scanf("%d", &matrixA[i][j]);
+            printf("Insira o elemento a%d%d: ", i + 1, j + 1); //pede para inserir o elemento 
+            scanf("%d", &matrixA[i][j]); // lê o elemento inserido
         }
 
     printf("Insere os elementos da Matriz B:\n");
@@ -40,10 +40,9 @@ int main() {
         }
 
 
-
-    // printing the result
+    // apresentamos o resultado da soma
     printf("\nA Soma das Matrizes A e B é: \n");
-    SumMatrix(matrixA, matrixB);
+    SumMatrix(matrixA, matrixB); // chamamos a função SumMatrix e adicionamos como paramentros as nossas Matrizes
 
     return 0;
 }

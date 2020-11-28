@@ -8,8 +8,8 @@
 #ifndef Header
 
 int rows, colums, i, j;
-int matrixA[100][100];
-int matrixB[100][100];
-int matrixResult[100][100];
+int matrixA[10][10];
+int matrixB[10][10];
+int matrixResult[10][10];
 
 #endif
