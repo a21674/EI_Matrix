@@ -12,7 +12,7 @@
 
 
 int main() {
-    setlocale(LC_ALL, "Portuguese"); //habilita a acentuação para o português
+    setlocale(LC_ALL, "Portuguese"); //definimos a codificação da nossa região
 
 
     printf("Bem-Vindo ao EI_Matrix \n");
@@ -25,16 +25,17 @@ int main() {
 
 
     printf("\nInsere os elementos da Matriz A:\n");
-    for (i = 0; i < rows; ++i) // cliclo para apresentar o numero de linhas definidas
-        for (j = 0; j < colums; ++j) // cliclo para apresentar o numero de colunas definidas
+    for (i = 0; i < rows; ++i) // ciclo principal para correr numero de linhas definidas
+        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
         {
             printf("Insira o elemento a%d%d: ", i + 1, j + 1); //pede para inserir o elemento 
             scanf("%d", &matrixA[i][j]); // lê o elemento inserido
         }
 
     printf("Insere os elementos da Matriz B:\n");
-    for (i = 0; i < rows; ++i)
-        for (j = 0; j < colums; ++j) {
+    for (i = 0; i < rows; ++i)  // ciclo principal para correr numero de linhas definidas
+        for (j = 0; j < colums; ++j) // ciclo secundario para correr o numero de colunas definidas. Este ciclo for está dentro do outro para ele correr todas as colunas da linha i, só qdo acabar as colunas é que vai para a linha seguinte
+        {
             printf("Enter element a%d%d: ", i + 1, j + 1);
             scanf("%d", &matrixB[i][j]);
         }
