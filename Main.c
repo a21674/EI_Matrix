@@ -48,8 +48,22 @@ int main() {
             break;
 
         case 2: 
-            printf("\n 2 - Subtrair duas matrizes: ");
+            printf("\n Opção Escolhida: 2 - Substrair duas matrizes: ");
+            printf("\nInsira o número de linhas (entre 1 e 10): ");
+            scanf("%d", &rows); // lê o numero de linhas
+
+            printf("Insira o número de colunas (entre 1 e 10): ");
+            scanf("%d", &colums); // lê o numero de colunas
+
+            insertValuesMatrixA();
+            insertValuesMatrixB();
+
+            // apresentamos o resultado da soma
+            printf("\nA Soma das Matrizes A e B é: \n");
+            SubtractMatrix(matrixA, matrixB); // chamamos a função SumMatrix e adicionamos como paramentros as nossas Matrizes
+
             break;
+
         case 3: 
             printf("\n 3 - Multiplicar duas matrizes: ");
             break;
