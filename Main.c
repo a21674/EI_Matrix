@@ -23,6 +23,7 @@ int main() {
         printf("\n 1 - Somar duas matrizes: ");
         printf("\n 2 - Subtrair duas matrizes: ");
         printf("\n 3 - Multiplicar duas matrizes: ");
+        printf("\n 4 - Dividir duas matrizes: ");
 
         printf("\n\n");
         printf("\n Digite a opção que deseja: ");
@@ -31,7 +32,7 @@ int main() {
         switch (opcao)
         {
         case 1: 
-            printf("\n Opção Escolhida: 1 - Somar duas matrizes: ");
+            printf("\nOpção Escolhida: 1 - Somar duas matrizes: ");
             printf("\nInsira o número de linhas (entre 1 e 10): ");
             scanf("%d", &rows); // lê o numero de linhas
 
@@ -48,7 +49,7 @@ int main() {
             break;
 
         case 2: 
-            printf("\n Opção Escolhida: 2 - Substrair duas matrizes: ");
+            printf("\nOpção Escolhida: 2 - Substrair duas matrizes: ");
             printf("\nInsira o número de linhas (entre 1 e 10): ");
             scanf("%d", &rows); // lê o numero de linhas
 
@@ -68,26 +69,23 @@ int main() {
             printf("\n 3 - Multiplicar duas matrizes: ");
             break;
 
+        case 4:
+            printf("\n 4 - Dividir duas matrizes: ");
+            break;
+
+        case 9:
+            break;
+
         default:
             printf("Insira uma opção correta");
             break;
 
         }
            
-
+        printf("\nPara continuar prima 0. Para sair prima 9: ");
+        scanf("%d", &opcao);
 
     }
    
-
-    
-
-    
-    
-
-    
-
-
-   
-
     return 0;
 }
