@@ -34,13 +34,15 @@ int main() {
         case 1: 
             printf("\nOpção Escolhida: 1 - Somar duas matrizes: ");
             printf("\nInsira o número de linhas (entre 1 e 10): ");
-            scanf("%d", &rows); // lê o numero de linhas
+            scanf("%d", &rowsMatrixA); // lê o numero de linhas
+            rowsMatrixB = rowsMatrixA; // como para somas de matrizes estas tem que ter o mesmo tamanho, definimos a matriz B = à matriz A sem perguntar ao utilizador
 
             printf("Insira o número de colunas (entre 1 e 10): ");
-            scanf("%d", &colums); // lê o numero de colunas
+            scanf("%d", &columsMatrixA); // lê o numero de colunas
+            columsMatrixB = columsMatrixA; // como para somas de matrizes estas tem que ter o mesmo tamanho, definimos a matriz B = à matriz A sem perguntar ao utilizador
 
-            insertValuesMatrixA();
-            insertValuesMatrixB();
+            insertValuesMatrixA(); //função que calcula e pede o numero de elementos da matriz A
+            insertValuesMatrixB(); //função que calcula e pede o numero de elementos da matriz B
 
             // apresentamos o resultado da soma
             printf("\nA Soma das Matrizes A e B é: \n");
@@ -51,10 +53,10 @@ int main() {
         case 2: 
             printf("\nOpção Escolhida: 2 - Substrair duas matrizes: ");
             printf("\nInsira o número de linhas (entre 1 e 10): ");
-            scanf("%d", &rows); // lê o numero de linhas
+            scanf("%d%d", &rowsMatrixA, &rowsMatrixB); // lê o numero de linhas
 
             printf("Insira o número de colunas (entre 1 e 10): ");
-            scanf("%d", &colums); // lê o numero de colunas
+            scanf("%d%d", &columsMatrixA, &columsMatrixB); // lê o numero de colunas
 
             insertValuesMatrixA();
             insertValuesMatrixB();
@@ -67,6 +69,27 @@ int main() {
 
         case 3: 
             printf("\n 3 - Multiplicar duas matrizes: ");
+
+            printf("\nInsira o número de linhas da Matriz A (entre 1 e 10): ");
+            scanf("%d", &rowsMatrixA); // lê o numero de linhas
+
+            printf("Insira o número de colunas da Matriz A (entre 1 e 10): ");
+            scanf("%d", &columsMatrixA); // lê o numero de colunas
+
+            printf("\nInsira o número de linhas da Matriz B (entre 1 e 10): ");
+            scanf("%d", &rowsMatrixB); // lê o numero de linhas
+
+            printf("Insira o número de colunas da Matriz B (entre 1 e 10): ");
+            scanf("%d", &columsMatrixB); // lê o numero de colunas
+
+            insertValuesMatrixA();
+            insertValuesMatrixB();
+
+            // apresentamos o resultado da soma
+            printf("\nO produto das Matrizes A e B é: \n");
+            SubtractMatrix(matrixA, matrixB); // chamamos a função SumMatrix e adicionamos como paramentros as nossas Matrizes
+
+            break;
             break;
 
         case 4:
